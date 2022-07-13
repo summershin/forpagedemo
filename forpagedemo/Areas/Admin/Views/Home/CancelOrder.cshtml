@@ -1,0 +1,46 @@
+﻿@*Table Start*@
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-12">
+            <div class="input-group mb-3">            
+                @*<button class="btn btn-outline-secondary btn-danger m-2" type="button" id="button-addon2">Button</button>*@
+            </div>
+            <div class="bg-secondary rounded h-100 p-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">訂單編號</th>
+                            <th scope="col">名字</th>
+                            <th scope="col">姓氏</th>
+                            <th scope="col">訂單日期</th>
+                            <th scope="col">付款方式</th>
+                            <th scope="col">訂單狀態</th>
+                            <th scope="col">總價格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">236</th>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>05  2 2022 12:00AM</td>
+                            <td>信用卡</td>
+                            <td><select class="form-select" aria-label="Default select example">
+                                <option value="1">已下訂</option>
+                                <option value="2">取消訂單</option>
+                                <option value="3">已出貨</option>
+                                <option value="4">完成訂單</option>
+                                <option selected>取消程序中</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-secondary btn-danger m-2" type="button" id="button-addon2">送出</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@*Table End*@

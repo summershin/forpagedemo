@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+@{ 
+    ViewBag.Tittle = "Home Page";
+
+
+    var date = ViewBag.Date;
+    var Customer = ViewBag.Customer;
+    var list = ViewBag.List;
+}
+
+@*@model IEnumerable<prjMvcCoreDemo.Models.TCustomer>*@
+<br />
+<h1 class="text-center">IGO帳戶一覽表</h1>
+<br />
+<div class="input-group mb-3">
+    <input type="text" style="border:1px white solid" class="form-control" placeholder="顧客名字" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <button class="btn btn-outline-secondary btn-danger m-2" type="button" id="button-addon2">Button</button>
+</div>
+<br />
+
+<div class="@*bg-secondary*@ rounded">
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FCustumerId)*@ UID
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FLastName)*@  姓氏
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FFirstName)*@ 名字
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FEmail)*@ E-Mail
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FPhone)*@ 手機號碼
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FGender)*@ 性別
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FCityId)*@ 居住地區
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FAddress)*@ 通訊地址
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FBirth)*@ 生日
+                </th>
+                <th>
+                    @*@Html.DisplayNameFor(model => model.FSignUpDate)*@ 註冊日期
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @*@foreach (var item in Model)
+                {*@
+            @for (int i = 0; i <list.Count; i++)
+            {
+            <tr>
+                <td>
+                    @list[i].ToString()
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FLastName)*@ 東方
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FFirstName)*@ 未明
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FEmail)*@ noshine83@gmail.com
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FPhone)*@ 0921000001
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FGender)*@ 男
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FCityId)*@ 台北市
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FAddress)*@ 112 臺北市北投區光明路16號
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FBirth)*@ 1994-01-29
+                </td>
+                <td>
+                    @*@Html.DisplayFor(modelItem => item.FSignUpDate)*@ 2021-01-24
+                </td>
+                <td>
+                    @Html.ActionLink("修改", "Edit", new { /* id=item.PrimaryKey */ }) |
+        @Html.ActionLink("刪除", "", new { /* id=item.PrimaryKey */ }, new { onclicj = "return confirm('確定要刪除嗎?')" })
+                    @*<input type="submit" value="修改" class="btn btn-outline-info" /> |
+                    <input type="submit" value="刪除" class="btn btn-outline-primary" />*@
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

@@ -1,0 +1,102 @@
+﻿@model IEnumerable<forpagedemo.Models.FeedbackManagement>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>評論一覽表</h1>
+@using (Html.BeginForm())
+{
+    @:產品名稱 @Html.TextBox("txtKeyword")
+    <input type="submit" value="查詢" />
+}
+<p>
+    <a asp-action="Create">新增評論</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                序
+            </th>
+            <th>
+                姓名
+            </th>
+            <th>
+                內容
+            </th>
+            <th>
+                分數
+            </th>
+            <th>
+               產品名稱
+            </th>
+            <th>
+                日期
+            </th>
+            <th>
+              圖片
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @{ int count = 0;
+            foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>
+                        @count
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Customer.LastName)
+                        @Html.DisplayFor(modelItem => item.Customer.FirstName)
+                       
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FeedbackContent)
+                       
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ranking)
+                        
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Products.ProductName)
+                        
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FeedbackDate)
+                    </td>
+                    <td>    
+                        <img src="~/images/@item.ImagePath" width="80" height="40" />
+
+                    </td>
+                    <td>
+                        @Html.ActionLink("修改", "Edit", new { id = item.FeedbackId }) |
+                        @Html.ActionLink("刪除", "Delete", "Product", new { id = item.FeedbackId },
+                            new { onclick = "return confirm('確定要刪除嗎?')" })
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+@*Bottom*@
+<div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row justify-content-center">
+        <div @*class="col-lg-10 border rounded p-1"*@>
+            <div @*class="border rounded text-center p-1"*@>
+                <div class="bg-transparent rounded text-center p-5">
+                    <h4 class="mb-4">@*Subscribe Our*@ <span class="text-primary text-uppercase">@*Newsletter*@</span></h4>
+                    <div @*class="position-relative mx-auto"*@ style="max-width: 400px;">
+                        @*<input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                            <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*Bottom*@

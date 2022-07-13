@@ -1,0 +1,61 @@
+﻿@model IEnumerable<prjIGObackend.Models.CSupplier>
+
+@{
+    ViewData["Title"] = "List";
+}
+
+<h1>供應商列表</h1>
+
+<p>
+    <a asp-action="Create">新增供應商</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                序
+            </th>
+            <th>
+                公司名稱
+            </th>
+            <th>
+                供應商電話
+            </th>
+            <th>
+                供應商地址
+            </th>
+             
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @{ int count = 0;
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>
+                        @count
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompanyName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Address)
+                    </td>
+
+                    <td>
+                        @Html.ActionLink("修改", "Edit","Supplier" ,new { id = item.SupplierID }) |
+
+                        @Html.ActionLink("刪除", "Delete", "Supplier", new { id = item.SupplierID }, new { onclick = "return confirm('確定刪除嗎?')" })
+                    </td>
+                </tr>
+            }
+            }
+        </tbody>
+</table>
+            

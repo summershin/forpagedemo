@@ -1,0 +1,264 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" style="background-image: url('/img/movieh.jpg');">
+    <div class="container-fluid page-header-inner py-5">
+        <div class="container text-center pb-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">電影列表</h1>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Booking Start -->
+<div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="bg-white shadow" style="padding: 35px;">
+            <div class="row g-2">
+                <div class="col-md-10">
+                    <div class="row g-2">
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>現正上映</option>
+                                <option value="1">媽的多重宇宙</option>
+                                <option value="2">奇異博士2：失控多重宇宙</option>
+                                <option value="3">怪獸與鄧不利多的秘密</option>
+                                <option value="4">咒</option>
+                                <option value="5">詭棋</option>
+                                <option value="6">猛鬼大學：第2學期</option>
+
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>評價高到低</option>
+                                <option value="1">評價低到高</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>人氣高到低</option>
+                                <option value="1">人氣低到高</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="">
+                                <input type="text" class="form-control form-control-sm" id="name" placeholder="請輸入片名">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100">搜尋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Booking End -->
+<!-- Room Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">商品列表</h6>
+            <h1 class="mb-5">電影 <span class="text-primary text-uppercase">列表</span></h1>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="row g-4">
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/movie1.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">媽的多重宇宙</h5>
+                                <div class="ps-2">
+                                    <i id="btn_heart" class="fa-solid fa-heart " style="padding:0px 0 0 10px ;font-size:150% "></i>
+                                    <small class="fa fa-star text-primary"><span> 5.0</span></small>
+                                </div>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">《媽的多重宇宙》是一部2022年美國科幻電影，由關家永與丹尼爾·舒奈特編劇和執導。劇情講述一位中國移民捲入了一場瘋狂的冒險，她獨自一人能透過探索其他宇宙來拯救世界。</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            @Html.ActionLink("細節", "Detail", "Live", null,
+                           new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                            @Html.ActionLink("訂購", "Order", "Live", null,
+                           new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/movie2.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">奇異博士2：失控多重宇宙</h5>
+                                <div class="ps-2">
+                                    <i id="btn_heart" class="fa-solid fa-heart " style="padding:0px 0 0 10px ;font-size:150% "></i>
+                                    <small class="fa fa-star text-primary"><span> 5.0</span></small>
+                                </div>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">《奇異博士2：失控多重宇宙》是一部2022年上映的美國超級英雄電影，以漫威漫畫的「奇異博士」史蒂芬·史傳奇為主角，由漫威影業製作，華特迪士尼工作室電影發行。影片是2016年上映的電影《奇異博士》續集兼漫威電影宇宙的第28部電影作品，屬於漫威電影宇宙第四階段。</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            @Html.ActionLink("細節", "Detail", "Live", null,
+                           new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                            @Html.ActionLink("訂購", "Order", "Live", null,
+                           new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/movie3.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">怪獸與鄧不利多的秘密</h5>
+                                <div class="ps-2">
+                                    <i id="btn_heart" class="fa-solid fa-heart " style="padding:0px 0 0 10px ;font-size:150% "></i>
+                                    <small class="fa fa-star text-primary"><span> 5.0</span></small>
+                                </div>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">《怪獸與鄧不利多的秘密》是一部2022年英美合拍奇幻電影，由大衛·葉慈執導，J·K·羅琳和史提夫·克羅夫斯共同撰寫劇本。該片改編自羅琳於2001年的小說《怪獸與牠們的產地》，為2018年電影《怪獸與葛林戴華德的罪行》的續集以及《怪獸系列電影》的第三部電影，同時亦是整個「魔法世界」的第十一部電影。</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            @Html.ActionLink("細節", "Detail", "Live", null,
+                           new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                            @Html.ActionLink("訂購", "Order", "Live", null,
+                           new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/movie4.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">咒</h5>
+                                <div class="ps-2">
+                                    <i id="btn_heart" class="fa-solid fa-heart " style="padding:0px 0 0 10px ;font-size:150% "></i>
+                                    <small class="fa fa-star text-primary"><span> 5.0</span></small>
+                                </div>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">《咒》是一部於2022年上映的臺灣恐怖電影，也是臺灣自製首部邪教驚悚片，同時也是「一字宇宙」系列的第一部外傳電影</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            @Html.ActionLink("細節", "Detail", "Live", null,
+                           new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                            @Html.ActionLink("訂購", "Order", "Live", null,
+                           new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/movie5.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">詭棋</h5>
+                                <div class="ps-2">
+                                    <i id="btn_heart" class="fa-solid fa-heart " style="padding:0px 0 0 10px ;font-size:150% "></i>
+                                    <small class="fa fa-star text-primary"><span> 5.0</span></small>
+                                </div>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">《詭棋The Darker the Lake》許瑋甯與曹佑寧一同演出的跨國合作電影，還找來德國知名女星薇諾妮卡費瑞兒加盟，是令人期待的驚悚之作！</p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            @Html.ActionLink("細節", "Detail", "Live", null,
+                           new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                            @Html.ActionLink("訂購", "Order", "Live", null,
+                           new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/movie6.jpg" alt="">
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">猛鬼大學：第2學期</h5>
+                                <div class="ps-2">
+                                    <i id="btn_heart" class="fa-solid fa-heart fa-regular" style="padding:0px 0 0 10px ;font-size:150% "></i>
+                                    <small class="fa fa-star text-primary"><span> 5.0</span></small>
+                                </div>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                《猛鬼大學：第2學期》集結泰國最恐怖校園傳說，在歷屆學生間不斷流傳，傳遍所有班級系所，在咒靈聚集的校園裡，最令人毛骨悚然的故事即將襲來。
+                            </p>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            @Html.ActionLink("細節", "Detail", "Live", null,
+                           new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                            @Html.ActionLink("訂購", "Order", "Live", null,
+                           new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Bottom*@
+<div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row justify-content-center">
+        <div @*class="col-lg-10 border rounded p-1"*@>
+            <div @*class="border rounded text-center p-1"*@>
+                <div class="bg-transparent rounded text-center p-5">
+                    <h4 class="mb-4">@*Subscribe Our*@ <span class="text-primary text-uppercase">@*Newsletter*@</span></h4>
+                    <div @*class="position-relative mx-auto"*@ style="max-width: 400px;">
+                        @*<input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                            <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*Bottom*@
+
+@section Styles{
+<style>
+    .ellipsis {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>
+   
+}
+
+@section Scripts{
+    <script>
+        const hearts = document.querySelectorAll("#btn_heart");
+        console.log(hearts);
+        hearts.forEach(function (heart) {
+            heart.addEventListener("click", () => {
+                $(this).toggleClass("fa-regular")
+            })
+        })
+
+    </script>
+}

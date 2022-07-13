@@ -1,0 +1,201 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+<div class="container-fluid pt-4 px-4">
+    <div class="col-12">
+        <div class="bg-secondary rounded h-100 p-4">
+            <h6 class="mb-4">產品列表</h6>
+            <form class="d-none d-md-flex ms-4">
+                <div class="col-md-3">
+                    <input class="form-control bg-dark border-0 " type="search" placeholder="輸入商品名稱">
+                    <input class="btn btn-secondary m-2" type="submit" value="搜尋" />
+                    <button class="btn btn-secondary m-2 float-lg-end" type="button" data-bs-toggle="modal" data-bs-target="#createproduct">新增</button>
+                </div>
+
+            </form>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">序號</th>
+                            <th scope="col">商品名稱</th>
+                            <th scope="col" class="col-md-1">縣市</th>
+                            <th scope="col">地址</th>
+                            <th scope="col">供應商</th>
+                            <th scope="col">庫存</th>
+                            <th scope="col">販售期限</th>
+                            <th scope="col">商品類別</th>
+                            <th scope="col" class="col-md-4">商品簡介</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @*商品組*@
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>世界宗教博物館門票</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">台中市</option>
+                                    <option value="2">雲林縣</option>
+                                    <option value="3">桃園市</option>
+                                    <option value="4">台南市</option>
+                                    <option value="5" selected>新北市</option>
+                                    <option value="6">新竹縣</option>
+                                </select>
+                            </td>
+                            <td>新北市永和區中山路一段236號7樓</td>
+                            <td>世界宗教博物館</td>
+                            <td>500</td>
+                            <td>2022/10/11</td>
+                            <td>景點</td>
+                            <td>日本伊勢神宮、台灣路思義教堂、印尼婆羅浮屠、以色列圓頂清真寺……等十座知名世界經典宗教建築，其建築格局、細部空間與對稱之美，皆具體而微地濃縮到 1/30 或 1/50 </td>
+                            <td>
+                                <button type="button" class="btn btn-success m-2" style="font-size:0.8em">編輯</button>
+                                <button type="button" class="btn btn-danger  m-2" style="font-size:0.8em">刪除</button>
+                            </td>
+                        </tr>
+                        @*商品組*@
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>遠雄海洋公園門票</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">台中市</option>
+                                    <option value="2">雲林縣</option>
+                                    <option value="3">桃園市</option>
+                                    <option value="4" selected>花蓮縣</option>
+                                    <option value="5">新北市</option>
+                                    <option value="6">新竹縣</option>
+                                </select>
+                            </td>
+                            <td>花蓮縣壽豐鄉189號</td>
+                            <td>遠雄海洋公園</td>
+                            <td>800</td>
+                            <td>2022/12/31</td>
+                            <td>景點</td>
+                            <td>水中精靈「海豚傳說 - 跳浪奇緣」、活潑逗趣「海獅小學堂」、國際級表演「奇妙海洋慶典」、動畫實境劇場「美人魚的神秘傳說」、浩瀚海底世界「大洋池的生態奧秘」</td>
+                            <td>
+                                <button type="button" class="btn btn-success m-2" style="font-size:0.8em">編輯</button>
+                                <button type="button" class="btn btn-danger  m-2" style="font-size:0.8em">刪除</button>
+                            </td>
+                        </tr>
+                        @*商品組*@
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>野柳海洋世界</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">台中市</option>
+                                    <option value="2">雲林縣</option>
+                                    <option value="3">桃園市</option>
+                                    <option value="4">台南市</option>
+                                    <option value="5" selected>新北市</option>
+                                    <option value="6">新竹縣</option>
+                                </select>
+                            </td>
+                            <td>新北市萬里區港東路167-3號</td>
+                            <td>野柳海洋世界</td>
+                            <td>1000</td>
+                            <td>2022/12/31</td>
+                            <td>景點</td>
+                            <td>野柳海洋世界為台灣第一座展示海洋哺乳類動物之展館，走過三十年，今日的海洋劇場成為以海洋哺乳類生態知識為主題的生態展演劇場，在維納斯海岸環抱、遙望基隆嶼的絕美海岸線風光中，為您揭開蔚藍海洋的神秘面紗。</td>
+                            <td>
+                                <button type="button" class="btn btn-success m-2" style="font-size:0.8em">編輯</button>
+                                <button type="button" class="btn btn-danger  m-2" style="font-size:0.8em">刪除</button>
+                            </td>
+                        </tr>
+                        @*商品組*@
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>六福村票券</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">台中市</option>
+                                    <option value="2">雲林縣</option>
+                                    <option value="3">桃園市</option>
+                                    <option value="4" selected>花蓮縣</option>
+                                    <option value="5">新北市</option>
+                                    <option value="6">新竹縣</option>
+                                </select>
+                            </td>
+                            <td>花蓮縣永和路大安區40號</td>
+                            <td>六福村</td>
+                            <td>800</td>
+                            <td>2022/12/31</td>
+                            <td>景點</td>
+                            <td>六福村主題遊樂園，簡稱六福村，是一座位於臺灣新竹縣關西鎮的主題樂園。為六福開發旗下的企業之一。前身為1979年成立的六福村野生動物園，在1989年時開始規劃擴建成為主題樂園，於1994年開放第一個主題園區「美國大西部」。目前遊樂園內共分為五大主題區域，分別是「中央魔術噴泉」、「美國大西部」、「南太平洋」、「阿拉伯皇宮」和「非洲部落」（野生動物園）</td>
+                            <td>
+                                <button type="button" class="btn btn-success m-2" style="font-size:0.8em">編輯</button>
+                                <button type="button" class="btn btn-danger  m-2" style="font-size:0.8em">刪除</button>
+                            </td>
+                        </tr>
+                        @*商品組*@
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>麗寶票券</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1" selected>台中市</option>
+                                    <option value="2">雲林縣</option>
+                                    <option value="3">桃園市</option>
+                                    <option value="4">台南市</option>
+                                    <option value="5">新北市</option>
+                                    <option value="6">新竹縣</option>
+                                </select>
+                            </td>
+                            <td>台中市中和區安和路80號</td>
+                            <td>台中麗寶樂園</td>
+                            <td>1000</td>
+                            <td>2022/12/31</td>
+                            <td>景點</td>
+                            <td>麗寶樂園渡假區是位於臺灣台中市后里區的大型渡假區，是臺灣第一個民間興建營運後轉移模式（BOT）休閒產業開發案，2000年7月1日開園時為長億關係企業經營的「月眉育樂世界」，2006年改由麗寶建設接手經營，2012年更名「麗寶樂園」，2018年更為現名。園區目前共分為「馬拉灣」與「探索世界」水陸兩個部分，以及後續增建的「福容大飯店（麗寶樂園店）」、「密室逃脫旗艦館」、「麗寶OUTLET MALL（一期、二期）」、「麗寶樂園休息站」、「麗寶國際賽車場」與「摩天輪－天空之夢」。</td>
+                            <td>
+                                <button type="button" class="btn btn-success m-2" style="font-size:0.8em">編輯</button>
+                                <button type="button" class="btn btn-danger  m-2" style="font-size:0.8em">刪除</button>
+                            </td>
+                        </tr>
+                        @*商品組*@
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>劍湖山票券</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example">
+                                    <option value="1">台中市</option>
+                                    <option value="2" selected>雲林縣</option>
+                                    <option value="3">桃園市</option>
+                                    <option value="4">台南市</option>
+                                    <option value="5">新北市</option>
+                                    <option value="6">新竹縣</option>
+                                </select>
+                            </td>
+                            <td>雲林縣古坑鄉永光村大湖口67號</td>
+                            <td>劍湖山</td>
+                            <td>1000</td>
+                            <td>2022/12/31</td>
+                            <td>景點</td>
+                            <td>劍湖山世界是臺灣知名主題遊樂園，通稱劍湖山，位於雲林縣古坑鄉永光村劍湖附近，綜合「休閒、遊樂、文化、科技」四大功能。全園佔地面積60多公頃，主要大型熱門活動常見為痛車[1]，為嘉義耐斯企業旗下之大型遊樂園。和義大世界、六福村、九族文化村並稱臺灣遊樂園的「一三六九」。</td>
+                            <td>
+                                <button type="button" class="btn btn-success m-2" style="font-size:0.8em">編輯</button>
+                                <button type="button" class="btn btn-danger  m-2" style="font-size:0.8em">刪除</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade " id="createproduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog bg-secondary rounded h-100 p-4">
+        <div class="modal-header">
+            <h5 class="modal-title">
+                產品新增作業
+            </h5>
+        </div>
+        <div class="modal-body ">
+            產品新增區塊
+        </div>
+    </div>
+</div>

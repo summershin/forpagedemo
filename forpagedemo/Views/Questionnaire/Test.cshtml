@@ -1,0 +1,129 @@
+﻿
+@{
+    ViewData["Title"] = "Test";
+}
+<head>
+    <link rel="stylesheet" href="/css2/Questionnaire-web.css">
+     
+</head>
+<body>
+    <div id="full-1">
+        <div class="col-md-3"> </div>
+
+
+        <div class="col-md-6" style="margin:auto;align-content:center">
+
+            <form class="card p4" id="astrology">
+                <img src="~/img/astrology.png" width="64" style="display:block; margin:auto;" />
+
+
+                <h1 align="center" style="color:gold">IGO 心理趣味測驗</h1>
+
+                <h6 align="center" style="color:palevioletred;font-style:oblique;font-family:'Yu Gothic'">
+                    旅途中有許多空出來的時間，除了發呆外還能好好的和自己說話
+                </h6>
+                <br />
+
+                <br />
+                <div class="form-group row">
+                    <div style="text-align:center">
+                        <button style="color:white" class="btn btn-info">今天就用心理測驗找出最適合你的景點<br />和旅行風格吧!</button>
+                    </div>
+                </div>
+                <br />
+                <br />
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label> １．到達飯店／民宿後，會先做什麼事？</label>
+                    <br />
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 卸下行李後，馬上出去跑景點 </button><br />
+                    <button style="color:white" class="btn btn-info"> 在住宿處稍微休息、整理一下再繼續行程 </button>
+                </div>
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label style="margin-bottom: 10px"> ２．兩天一夜簡短的旅程，你只能選擇一個景點的話，你會選擇？</label>
+
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 能夠體驗從沒有體驗過的新鮮事的行程 </button> <br />
+                    <button style="color:white; margin-bottom:10px " class="btn btn-info">  充滿活力、熱鬧氣息的旅遊勝地 </button> <br />
+                    <button style="color:white" class="btn btn-info">  可以安靜休息、慢慢逛的景點 </button> <br />
+                </div>
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label style="margin-bottom:10px"> ３．以下三種活動，比較喜歡哪一種？</label><br />
+
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 遊樂園、嘉年華等活潑行程 </button> <br />
+                    <button style="color:white; margin-bottom:10px " class="btn btn-info"> 享受大自然、能悠閒發呆的鬆散行程</button> <br />
+                    <button style="color:white" class="btn btn-info">體驗新穎多樣的文化 </button> <br />
+                </div>
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label style="margin-bottom:10px"> ４．在異國旅行中，你最有興趣的是？</label><br />
+
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 異國的傳統文化特色 </button> <br />
+                    <button style="color:white; margin-bottom:10px " class="btn btn-info"> 異國的時下流行活動和景點</button> <br />
+                    <button style="color:white" class="btn btn-info">異國的浪漫傳說和景點風情 </button> <br />
+                </div>
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label style="margin-bottom:10px"> ５．計畫旅行時，你比較常＿＿＿＿？</label><br />
+
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 出去玩就是要充實豐富才熱血！ </button> <br />
+                    <button style="color:white; margin-bottom:10px " class="btn btn-info"> 放空、盡情享受才是旅行真諦～</button> <br />
+                </div>
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label style="margin-bottom:10px"> ６．旅行期間，你比較常＿＿＿＿？</label><br />
+
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 行程日期已經訂好，最好可以按照計畫走 </button> <br />
+                    <button style="color:white; margin-bottom:10px " class="btn btn-info"> 雖然已經訂好，但行程只是個大概，隨意更動都沒差</button> <br />
+
+                </div>
+
+                <div id="question" style="text-align:center" class="alert alert-primary">
+                    <label style="margin-bottom:10px"> ７、在旅行中，最想吃哪種美食？</label><br />
+
+                    <button style="color:white; margin-bottom:10px" class="btn btn-info"> 在特色咖啡館吃甜點、喝下午茶  </button> <br />
+                    <button style="color:white; margin-bottom:10px " class="btn btn-info"> 當地傳統美食</button> <br />
+                    <button style="color:white" class="btn btn-info">在住宿吃炸雞配啤酒 </button> <br />
+                </div>
+
+                <div>
+                     <button type="button" style="display:block;margin:0 auto" class="btn btn-primary" value="連結名稱" onclick="location.href='/Questionnaire/TestResult'">提交</button>
+                </div>
+
+                </br>
+
+            </form>
+
+
+
+
+        </div>
+
+
+        <div class="col-md-3"></div>
+
+    </div>
+
+    @*Bottom*@
+    <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s" id="full-1">
+        <div class="row justify-content-center">
+            <div @*class="col-lg-10 border rounded p-1"*@>
+                <div @*class="border rounded text-center p-1"*@>
+                    <div class="bg-transparent rounded text-center p-5">
+                        <h4 class="mb-4">@*Subscribe Our*@ <span class="text-primary text-uppercase">@*Newsletter*@</span></h4>
+                        <div @*class="position-relative mx-auto"*@ style="max-width: 400px;">
+                            @*<input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Bottom*@
+
+</body>
+
+
+

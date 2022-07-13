@@ -1,0 +1,284 @@
+﻿
+@{
+    ViewData["Title"] = "CollectionList";
+}
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
+
+
+
+    <div class="container-xxl bg-white p-0">
+        <div class="container">
+            <div class="bg-white shadow" style="padding: 35px;">
+                <div class="row ">
+                    <div class="col-md-3">
+                        <div>
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <img src="/img/UID47.jpg" class="card-img-top" alt="UID47">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">戴樂古 ． 花兒</h5>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="card border-primary mb-3" style="max-width: 18rem;">
+                                <ul class="list-group">
+                                    <!--============================================這邊加入超連結======================================================================================-->
+
+                                    <li class="list-group-item">
+                                        會員資料管理
+                                        @*@Html.ActionLink("會員資料管理", "", new { /* id=item.PrimaryKey */ })*@
+                                    </li>
+                                    <li class="list-group-item">
+                                        修改密碼
+                                        @*@Html.ActionLink("修改密碼", "", new { /* id=item.PrimaryKey */ })*@
+                                    </li>
+                                    <li class="list-group-item">
+                                        訂單管理
+                                        @*@Html.ActionLink("訂單管理", "", new { /* id=item.PrimaryKey */ })*@
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href="CollectionList">
+                                            我的收藏
+                                        </a>
+                                        @*@Html.ActionLink("我的收藏", "", new { /* id=item.PrimaryKey */ })*@
+                                    </li>
+                                    <li class="list-group-item">
+                                        我的評論
+                                        @*@Html.ActionLink("我的評論", "", new { /* id=item.PrimaryKey */ })*@
+                                    </li>
+                                    <li class="list-group-item">
+                                        刪除帳戶與個人資料
+                                        @*@Html.ActionLink("刪除帳戶與個人資料", "Delete", new { /* id=item.PrimaryKey */}, new { onclick = "return confirm('確定要刪除嗎?')" })*@
+                                    </li>
+                                    <!--============================================這邊加入超連結======================================================================================-->
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <form>
+                            <!--============================================這邊加入其他頁面======================================================================================-->
+                            <div>
+                                <div style="float:inline-start">
+                                    <h3 style="color:coral">我的收藏</h3>
+                                    <br />
+
+                                    <label style="display:inline">3 個行程在您的收藏 </label>
+
+                                    <select class="form-select" aria-label="Default select example" style="width:10px;height:15px;display:inline;float:right ">
+                                        <option selected>地區</option>
+                                        <option value="1">加入收藏時間</option>
+                                        <option value="2">價格</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <!--============================================這邊加入收藏項目=====================================================================================-->
+                            <div id="div1">
+                                <div class="card border-warning mb-3" style="max-width: 840px; height: 270px; background-color: white">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/img/165415514551635_P16927548.jpg" class="img-fluid rounded-start" alt="..." style="height:270px;display:block; margin:auto;">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="display:inline-block">【4DX】怪獸與鄧不利多的秘密</h5>     <i class="fa-solid fa-heart" style="color:red" id="heart"></i>
+                                                <p class="card-text">《怪獸與鄧不利多的秘密》是一部2022年英美合拍奇幻電影，由大衛·葉慈執導，J·K·羅琳和史提夫·克羅夫斯共同撰寫劇本。該片改編自羅琳於2001年的小說《怪獸與牠們的產地》，為2018年電影《怪獸與葛林戴華德的罪行》的續集以及《怪獸系列電影》的第三部電影，同時亦是整個「魔法世界」的第十一部電影。</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+
+
+                                                &nbsp;
+                                                <label>1000人已訂購</label>  <i class="fa-solid fa-fire"></i> <label>NT280</label>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div id="div1">
+                                <div class="card border-warning mb-3" style="max-width: 840px; height: 270px; background-color:white">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/img/1171280236_o.jpg" class="img-fluid rounded-start" alt="..." style="height:270px;display:block; margin:auto;">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="display:inline-block">世界宗教博物館門票</h5>  <i class="fa-solid fa-heart" style="color:red" id="heart"></i>
+                                                <p class="card-text">日本伊勢神宮、台灣路思義教堂、印尼婆羅浮屠、以色列圓頂清真寺……等十座知名世界經典宗教建築，其建築格局、細部空間與對稱之美，皆具體而微地濃縮到 1/30 或 1/50 。</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                &nbsp;
+
+                                                <label>600人已訂購</label> <i class="fa-solid fa-fire"></i><label>NT300</label>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div id="div1">
+                                <div class="card border-warning mb-3" style="max-width: 840px; height: 270px; background-color:white">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="/img/123.jpg" class="img-fluid rounded-start" alt="..." style="height:270px;display:block; margin:auto;">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title" style="display:inline-block">野柳海洋世界</h5> <i class="fa-solid fa-heart" style="color:red" id="heart"></i>
+                                                <p class="card-text">野柳海洋世界為台灣第一座展示海洋哺乳類動物之展館，走過三十年，今日的海洋劇場成為以海洋哺乳類生態知識為主題的生態展演劇場，在維納斯海岸環抱、遙望基隆嶼的絕美海岸線風光中，為您揭開蔚藍海洋的神秘面紗。</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                <i class="fa-solid fa-star"></i>
+                                                &nbsp;
+
+                                                <label>1300人已訂購</label> <i class="fa-solid fa-fire"></i><label>NT360</label>
+                                            </div>
+
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </form> <!--============================================這邊加入其他頁面=========================================================================END=======-->
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    @*Bottom*@
+    <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="row justify-content-center">
+            <div @*class="col-lg-10 border rounded p-1"*@>
+                <div @*class="border rounded text-center p-1"*@>
+                    <div class="bg-transparent rounded text-center p-5">
+                        <h4 class="mb-4">@*Subscribe Our*@ <span class="text-primary text-uppercase">@*Newsletter*@</span></h4>
+                        <div @*class="position-relative mx-auto"*@ style="max-width: 400px;">
+                            @*<input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                                <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @*Bottom*@
+
+    @section Scripts{
+
+        <script>
+
+            const chkAll = $("#chkAll");
+            let AllCheckFlag = false;
+            const heart = document.querySelectorAll("#heart");
+
+            heart.forEach(function (data) {
+                console.log(data);
+                data.addEventListener("click", function () {
+                    $(this).toggleClass("fa-regular fa-solid");
+                    /* $(this).parentsUntil("#div1").parent().html("");*/
+                    $(this).parentsUntil("#div1").remove();
+                }
+                )
+            })
+
+
+            
+
+           
+            // const xhr = new XMLHttpRequest();
+            //const divInfo = document.querySelectorAll('#div1');
+      
+
+            //divInfo.forEach(function (data) {
+
+            //data.addEventListener('click', () => {
+            //    console.log(data);
+            //xhr.addEventListener('load', () => {
+            //    console.log("load");
+            //    //資料接收
+            //    const data = xhr.responseText;
+
+            //    //顯示資料
+            //    divInfo.innerHTML = "";
+            
+
+           
+            
+
+
+             
+
+            @*const url = "@Url.Content("/Customer/CollectionList")";  ;
+            xhr.open("Delete", url);
+            
+            xhr.send(); //按下Enter鍵才會真的去執行
+
+            })
+              })
+            })*@
+
+
+        </script>
+
+
+
+
+    }
+
+
+

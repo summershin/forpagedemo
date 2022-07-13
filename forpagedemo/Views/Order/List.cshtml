@@ -1,0 +1,155 @@
+﻿<ul class="nav nav-pills mb-3 container-xxl py-5" style="margin-top:100px" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">訂單狀態查詢</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">歷史訂單</button>
+    </li>
+</ul>
+
+<div class="tab-content  container-md py-5">
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <table class="table table-striped">
+            <thead>
+                <tr><th>訂單日期</th><th>訂單編號</th><th>訂單狀態</th><th>訂購總額</th><th>付款方式</th><th></th></tr>
+            </thead>
+            <tbody>
+                <tr><td>2022/5/2 12:00AM</td><td>236</td><td>已下訂</td><td>$911</td><td>信用卡</td><td><button class="btn btn-warning btnCancel">取消訂單</button></td></tr>
+                <tr>
+                    <th>
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                                查看訂單明細
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample1">
+                            <div class="card card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr><th>訂單明細編號</th><th>產品名稱</th><th>數量</th><th>票種</th><th>金額</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>170</td><td>新竹芙洛麗大飯店FLEURLIS |食譜自助百匯</td><td>1</td><td>下午茶</td><td>$911</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                <tr><td>2022/3/27 12:00AM</td><td>376</td><td>已下訂</td><td>$25444</td><td>信用卡</td><td><button class="btn btn-warning btnCancel">取消訂單</button></td></tr>
+                <tr>
+                    <td>
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                                查看訂單明細
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample2">
+                            <div class="card card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr><th>訂單明細編號</th><th>產品名稱</th><th>數量</th><th>票種</th><th>金額</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>532</td><td>台中異想新樂園-宙影幻鏡:傳奇</td><td>6</td><td>全票</td><td>$2994</td></tr>
+                                        <tr><td>533</td><td>台中異想新樂園-宙影幻鏡:傳奇</td><td>50</td><td>優待票</td><td>$22450</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="tab-pane" id="profile" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+        <table class="table table-striped">
+            <thead>
+                <tr><th>訂單日期</th><th>訂單編號</th><th>訂單狀態</th><th>訂購總額</th><th>付款方式</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>2021/12/17 12:00AM</td><td>247</td><td>完成訂單</td><td>$1635</td><td>信用卡</td></tr>
+                <tr>
+                    <th>
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+                                查看訂單明細
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample3">
+                            <div class="card card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr><th>訂單明細編號</th><th>產品名稱</th><th>數量</th><th>票種</th><th>金額</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>182</td><td>台北喜來登大飯店｜十二廚</td><td>1</td><td>晚餐</td><td>$1635</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                <tr><td>2021/12/20 12:00AM</td><td>210</td><td>完成訂單</td><td>$620.00</td><td>信用卡</td></tr>
+                <tr>
+                    <td>
+                        <p>
+                            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+                                查看訂單明細
+                            </a>
+                        </p>
+                        <div class="collapse" id="collapseExample4">
+                            <div class="card card-body">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr><th>訂單明細編號</th><th>產品名稱</th><th>數量</th><th>票種</th><th>金額</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td>134</td><td>翰品酒店花蓮 | 翔雲廳</td><td>1</td><td>下午茶</td><td>$620</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+@*Bottom*@
+<div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row justify-content-center">
+        <div @*class="col-lg-10 border rounded p-1"*@>
+            <div @*class="border rounded text-center p-1"*@>
+                <div class="bg-transparent rounded text-center p-5">
+                    <h4 class="mb-4">@*Subscribe Our*@ <span class="text-primary text-uppercase">@*Newsletter*@</span></h4>
+                    <div @*class="position-relative mx-auto"*@ style="max-width: 400px;">
+                        @*<input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                            <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*Bottom*@
+
+
+
+@section Scripts{
+    <script>
+        //tab
+        const firstTabEl = document.querySelector('#myTab li:last-child button')
+        /* const firstTab = new bootstrap.Tab(firstTabEl)*/
+
+        /* firstTab.show()*/
+
+        //取消訂單
+        $(".btnCancel").click(function () {
+            console.log("取消申請中");
+            $(this).text("取消申請中");
+            $(this).attr("disabled", "disabled");
+
+        });
+
+    </script>
+}
+
+

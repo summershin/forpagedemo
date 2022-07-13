@@ -1,0 +1,196 @@
+﻿@*Table Start*@
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-12">
+            <div class="input-group mb-3">
+                <input type="text" style="border:1px white solid" class="form-control" placeholder="戴樂古" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary btn-danger m-2" type="button" id="button-addon2">查詢</button>
+            </div>
+            <div class="bg-secondary rounded h-100 p-4">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">訂單編號</th>
+                            <th scope="col">名字</th>
+                            <th scope="col">姓氏</th>
+                            <th scope="col">訂單日期</th>
+                            <th scope="col">付款方式</th>
+                            <th scope="col">訂單狀態</th>
+                            <th scope="col">總價格</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="id204">
+                            <td scope="row">204</td>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>2021/06/25 12:00AM</td>
+                            <td>信用卡</td>
+                            <td>完成訂單</td>
+                            <td>$3059</td>
+                        </tr>
+                        <tr id="id247">
+                            <td scope="row">247</td>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>2021/12/17 12:00AM</td>
+                            <td>信用卡</td>
+                            <td>完成訂單</td>
+                            <td>$1635</td>
+                        </tr>
+                        <tr id="id236">
+                            <td scope="row">236</td>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>2022/05/2 12:00AM</td>
+                            <td>信用卡</td>
+                            <td>取消申請中</td>
+                            <td>$911</td>
+                        </tr>
+                        <tr id="id359">
+                            <td scope="row">359</td>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>2021/09/25 12:00AM</td>
+                            <td>信用卡</td>
+                            <td>取消訂單</td>
+                            <td>$16800</td>
+                        </tr>
+                        <tr id="id376">
+                            <td scope="row">376</td>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>2022/03/27 12:00AM</td>
+                            <td>信用卡</td>
+                            <td>已下訂</td>
+                            <td>$25444</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@*Table End*@
+
+
+
+<div class="container-fluid pt-4 px-4">
+    <div class="row g-4">
+        <div class="col-sm-12 col-xl-12">
+            <div class="input-group mb-3">
+                @*<button class="btn btn-outline-secondary btn-danger m-2" type="button" id="button-addon2">Button</button>*@
+            </div>
+            <div class="bg-secondary rounded h-100 p-4">
+                <select class="form-select" aria-label="Default select example" style="border:1px solid white">
+                    <option value="1">已下訂</option>
+                    <option value="2">取消訂單</option>
+                    <option value="3">已出貨</option>
+                    <option value="4">完成訂單</option>
+                    <option selected value="5">取消程序中</option>
+                </select>
+                <p></p>
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">訂單編號</th>
+                            <th scope="col">名字</th>
+                            <th scope="col">姓氏</th>
+                            <th scope="col">訂單日期</th>
+                            <th scope="col">付款方式</th>
+                            <th scope="col">訂單狀態</th>
+                            <th scope="col">總價格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">236</td>
+                            <td>花兒</td>
+                            <td>戴樂古</td>
+                            <td>05  2 2022 12:00AM</td>
+                            <td>信用卡</td>
+                            <td>
+                                <select class="form-select" aria-label="Default select example" id="seleStatus">
+                                    <option value="1">已下訂</option>
+                                    <option value="2">取消訂單</option>
+                                    <option value="3">已出貨</option>
+                                    <option value="4">完成訂單</option>
+                                    <option selected value="5">取消程序中</option>
+                                </select>
+                            </td>
+                            <td>
+                                <button class="btn btn-outline-secondary btn-danger m-2 btnSubmit" type="button" id="liveToastBtn">送出</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="toast-container position-fixed bottom-0 end-0 p-3">
+                    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                        <div class="toast-body">
+                            顧客取消訂單通知信件已寄出!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*Table End*@
+
+@section Scripts
+    {
+    <script>
+        let statusText;
+        $("#seleStatus").change(function () {
+            statusText = $("#seleStatus>option:selected").text();
+            //console.log(statusText);
+            /*console.log($("#id247>td:nth-child(6)").text(statusText));*/
+        })
+
+        $("tbody").on("click", ".btnSubmit", function () {
+            console.log(statusText);
+            console.log($("#id236>td:nth-child(6)").text(statusText));
+            //alert("送出申請?");
+            $(this).closest("tr").remove();
+
+        })
+        $(".btnSubmit").click(function ()
+        {
+            //alert("送出顧客訂單取消通知信件?");
+            $.ajax(
+                {
+                    typr: "POST",
+                    dataType: "text",
+                    url: '@Url.Content("~/Admin/Home/SentCancelOrderEmail")',
+                    data: {},
+                    success: function (result) {
+                        if (!result) {
+                            console.log("寄送失敗");
+                        }
+                        else {
+                            console.log("寄送成功");
+
+                        }
+                    }
+                });
+
+            console.log("send");
+        })
+
+        //顯示寄信成功訊息
+        const toastTrigger = document.getElementById('liveToastBtn')
+        const toastLiveExample = document.getElementById('liveToast')
+        if (toastTrigger) {
+            toastTrigger.addEventListener('click', () => {
+                const toast = new bootstrap.Toast(toastLiveExample)
+
+                toast.show()
+            })
+        }
+
+    </script>
+
+
+}

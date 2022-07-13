@@ -1,0 +1,320 @@
+﻿
+@{
+    ViewData["Title"] = "List";
+}
+
+
+<!-- Page Header Start -->
+<div class="container-fluid page-header mb-5 p-0" style="background-image: url('/img/room-1.jpg');">
+    <div class="container-fluid page-header-inner py-5">
+        <div class="container text-center pb-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">住宿列表</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center text-uppercase">
+                    <li class="breadcrumb-item text-primary">美食</li>
+                    <li class="breadcrumb-item text-primary">飯店</li>
+                    <li class="breadcrumb-item text-primary">展覽</li>
+                    <li class="breadcrumb-item text-primary">景點</li>
+                    <li class="breadcrumb-item text-primary">電影</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+<!-- Booking Start -->
+<div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container">
+        <div class="bg-white shadow" style="padding: 35px;">
+            <div class="row g-2">
+                <div class="col-md-10">
+                    <div class="row g-2">
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>所有城市</option>
+                                <option value="1">台北</option>
+                                <option value="2">高雄</option>
+                                <option value="3">花蓮</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>價格高到低</option>
+                                <option value="1">價格低到高</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>評價高到低</option>
+                                <option value="1">評價低到高</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option selected>人氣高到低</option>
+                                <option value="1">人氣低到高</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-primary w-100">搜尋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Booking End -->
+<!-- Room Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+            <h6 class="section-title text-center text-primary text-uppercase">商品列表</h6>
+            <h1 class="mb-5">飯店 <span class="text-primary text-uppercase">列表</span></h1>
+        </div>
+        <div class="row g-5 align-items-center">
+            <div class="row g-4">
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/live1.jpg" alt="">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">原售價打 XX 折</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">台北凱薩大飯店</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                這間休閒飯店位於中心商業區，可直接通往台北火車站，步行 14 分鐘可達繁華的西門町商圈。悠閒客房配有免費 Wi-Fi、平面電視、迷你吧，以及茶與咖啡沖泡設備；部分房間有色彩繽紛的藝術作品。升級客房設有休息區，套房增設起居室。提供客房服務。
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                @Html.ActionLink("細節", "Detail", "Live", null,
+                               new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                                @Html.ActionLink("訂購", "Order", "Live", null,
+                               new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/live2.jpg" alt="">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">原售價打 XX 折</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">台南老爺行旅</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                這間當代風格的精緻飯店鄰近南紡購物中心．距離奇美博物館 8 公里，距離台南花園夜市 5 公里。時髦客房的特色為極簡主義設計，並配有平面電視、小冰箱、免費 Wi-Fi 和茶飲咖啡沖泡設備；部分房型增設沙發床。另提供多種枕頭選擇與客房服務。
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                @Html.ActionLink("細節", "Detail", "Live", null,
+                               new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                                @Html.ActionLink("訂購", "Order", "Live", null,
+                               new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/live3.jpg" alt="">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">原售價打 XX 折</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">台中万枫酒店</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                這間簡約的酒店位於現代化的摩天大樓內，距離逢甲夜市步行約 17 分鐘，距離台中國家歌劇院 5 公里，距離台中國際機場 12 公里。簡約客房提供免費 Wi-Fi、平面電視、小冰箱、沙發，並坐擁城市景觀。套房增設獨立起居和用餐空間。
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                @Html.ActionLink("細節", "Detail", "Live", null,
+                               new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                                @Html.ActionLink("訂購", "Order", "Live", null,
+                               new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/live4.jpg" alt="">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">原售價打 XX 折</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">高雄洲際酒店</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                高雄洲際酒店坐落於亞洲新灣區, 地理位置位於便捷的中華路與新光路上。酒店的豪華設施和專業與貼心的服務將替您下次的度假行程或商務之旅提供完美的體驗。 我們酒店距離小港國際機場8公里, 高雄火車站4公里, 毗鄰三多購物商圈, 高雄展覽館與著名的85大樓。
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                @Html.ActionLink("細節", "Detail", "Live", null,
+                               new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                                @Html.ActionLink("訂購", "Order", "Live", null,
+                               new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/live5.jpg" alt="">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">原售價打 XX 折</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">台東桂田喜來登酒店</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                這間高級酒店位於繁華商業街的時髦建築中，步行 1 分鐘可達熱鬧的台東夜市，步行 7 分鐘可至台東鐵道藝術村，距離台東機場 6 公里。簡約的客房內有落地窗、平面電視、花灑淋浴設備及免費 Wi-Fi。升等客房增設座位區和/或按摩浴缸。提供客房服務。
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                @Html.ActionLink("細節", "Detail", "Live", null,
+                               new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                                @Html.ActionLink("訂購", "Order", "Live", null,
+                               new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*商品組件*@
+                <div class="col-lg-4 col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="~/img/live6.jpg" alt="">
+                            <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">原售價打 XX 折</small>
+                        </div>
+                        <div class="p-4 mt-2">
+                            <div class="d-flex justify-content-between mb-3">
+                                <h5 class="mb-0">煙波大飯店 宜蘭館</h5>
+                                <div class="ps-2">
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                    <small class="fa fa-star text-primary"></small>
+                                </div>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bed text-primary me-2"></i>3 Bed</small>
+                                <small class="border-end me-3 pe-3"><i class="fa fa-bath text-primary me-2"></i>2 Bath</small>
+                                <small><i class="fa fa-wifi text-primary me-2"></i>Wifi</small>
+                            </div>
+                            <p class="text-body mb-3 ellipsis">
+                                這間以泡泡為主題的現代風飯店坐落於住宅區街道旁，風格獨特，步行 12 分鐘可抵達積木博物館，距離宜蘭火車站 4 公里。簡約客房提供免費 Wi-Fi、平面電視和茶與咖啡沖泡設備。部分客房提供小冰箱、陽台和/或休息區。家庭房最多可容納 5 位房客入住。
+                            </p>
+                            <div class="d-flex justify-content-between">
+                                @Html.ActionLink("細節", "Detail", "Live", null,
+                               new { Class = "btn btn-sm btn-primary rounded py-2 px-4" })
+                                @Html.ActionLink("訂購", "Order", "Live", null,
+                               new { Class = "btn btn-sm btn-dark rounded py-2 px-4" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Bottom*@
+<div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="row justify-content-center">
+        <div @*class="col-lg-10 border rounded p-1"*@>
+            <div @*class="border rounded text-center p-1"*@>
+                <div class="bg-transparent rounded text-center p-5">
+                    <h4 class="mb-4">@*Subscribe Our*@ <span class="text-primary text-uppercase">@*Newsletter*@</span></h4>
+                    <div @*class="position-relative mx-auto"*@ style="max-width: 400px;">
+                        @*<input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email">
+                            <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2">Submit</button>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@*Bottom*@
+
+@section Styles{
+    <style>
+        .ellipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    </style>
+
+}
